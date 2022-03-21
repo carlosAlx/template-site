@@ -16,7 +16,6 @@ ul{
 .footer {
     display: flex;  
     justify-content: space-between;
-    border: 1px solid white;
     color: white;
     padding: 0;
     width: 100%;
