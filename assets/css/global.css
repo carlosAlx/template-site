@@ -8,11 +8,11 @@ ul{
     list-style: none;
 }
 
-/*-- footer*/
-.bg-black{
-    background-color: black;
+p {
+    font-size: 1.2rem;
 }
 
+/*-- footer*/
 .footer {
     display: flex;  
     justify-content: space-between;
@@ -29,25 +29,13 @@ ul{
 /*-- */
 
 
-/* GRID */
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-    -ms-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-}
-
-p {
-    font-size: 1.2rem;
-}
-
 .container {
-    width: 100%;
+    overflow: hidden;
     padding-right: 15px;
     padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+    display: block;
+    position: relative;
+    margin: auto;
 }
 
 .section-default {
@@ -93,9 +81,8 @@ p {
 
 /*-- banner*/
 .banner {
-    width: 100%;
     height: 500px;
-    border: 5px solid rgb(10, 10, 19);
+    border-bottom: 5px solid rgb(10, 10, 19);
     margin: auto;
     display: flex;
     position: relative;
@@ -107,25 +94,20 @@ p {
     
 }
 
-.bn-img {
-    width: 100%;
-    height: auto;
-}
 .img-resp{
     width: 100%;
-    border-style: outset;
 }
 .img-resp:hover{
     box-shadow: 0 8px 12px 1px black;
     transform: scale(1.01,1.01);
     transition: 0.5s;
 }
-
+/*-- banner*/
 .txt-banner {
     bottom: 0;
+    left: 0;
+    right: 0;
     position: absolute;
-    width: 100%;
-    box-shadow: 0 0 0.5 beige;
     padding: 20px;
     background-color: rgb(240, 233, 233);
     color: rgb(14, 13, 13);
@@ -136,9 +118,13 @@ p {
     text-align: center;
     z-index: 1;
 }
+.bn-img {
+    width: 100%;
+    height: auto;
+}
 
 /*-- */
-/*-- */
+/*-- background*/
 .bg-img {
     background-image: url('/assets/img/oceam.jpg');
     background-repeat: no-repeat;
@@ -150,30 +136,27 @@ p {
     background-color: black;
     color: aliceblue;
 }
+.bg-black{
+    background-color: black;
+}
+
 
 /*-- */
 
 /*-- colunas*/
 [class*="col-"] {
     position: relative;
-    width: 100%;
-    min-height: 1px;
-    padding: 20px;
     margin-left: auto;
     margin-right: auto;
+    padding: 10px;
+    flex: auto;
 }
 
 
-/*-- */
+/*-- display*/
 
 .row {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    -ms-flex-wrap: wrap;
-  
 }
 
 .d-flex {
@@ -220,11 +203,14 @@ p {
 /*-- */
 
 
-@media (max-width: 576px) {
+@media (max-width: 425px) {
     .nav-menu ul{
         display: block;
     }
     .footer{
+        display: block;
+    }
+    .row{
         display: block;
     }
 }
@@ -240,64 +226,34 @@ p {
     }
 
     .col-3 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 25%;
-        flex: 0 0 25%;
         max-width: 25%;
     }
 
     .col-4 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 33.333333%;
-        flex: 0 0 33.333333%;
         max-width: 33.333333%;
     }
     .col-6 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 50%;
-        flex: 0 0 50%;
         max-width: 50%;
     }
 
     .col-7 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 58.333333%;
-        flex: 0 0 58.333333%;
         max-width: 58.333333%;
     }
 
     .col-8 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 66.666667%;
-        flex: 0 0 66.666667%;
         max-width: 66.666667%;
     }
 
     .col-9 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 75%;
-        flex: 0 0 75%;
         max-width: 75%;
     }
 
     .col-10 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 83.333333%;
-        flex: 0 0 83.333333%;
         max-width: 83.333333%;
     }
 
-    .col-11 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 91.666667%;
-        flex: 0 0 91.666667%;
-        max-width: 91.666667%;
-    }
-
     .col-12 {
-        -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-        flex: 0 0 100%;
+        flex: auto;
         max-width: 100%;
     }
 
