@@ -28,7 +28,6 @@ p {
 
 /*-- */
 
-
 .container {
     overflow: hidden;
     padding-right: 15px;
@@ -96,6 +95,7 @@ p {
 
 .img-resp{
     width: 100%;
+    object-fit: cover;
 }
 .img-resp:hover{
     box-shadow: 0 8px 12px 1px black;
@@ -103,24 +103,23 @@ p {
     transition: 0.5s;
 }
 /*-- banner*/
-.txt-banner {
+.text-banner {
     bottom: 0;
     left: 0;
     right: 0;
     position: absolute;
-    padding: 20px;
     background-color: rgb(240, 233, 233);
     color: rgb(14, 13, 13);
     text-align: center;
 }
 
-.txt-banner a {
+.text-banner h1 {
     text-align: center;
     z-index: 1;
 }
 .bn-img {
     width: 100%;
-    height: auto;
+    object-fit: cover;
 }
 
 /*-- */
@@ -153,24 +152,12 @@ p {
 }
 
 
-/*-- display*/
+/*-- grid*/
 
 .row {
     display: flex;
+    flex-wrap: wrap;
 }
-
-.d-flex {
-    display: flex;
-}
-
-.d-block {
-    display: block;
-}
-
-.just-center {
-    justify-content: center;
-}
-
 /*-- */
 
 /*-- font*/
